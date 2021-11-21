@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Kelvim Isahi Sandoval Gutierrez -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/jpeg" href="D:\kelvi\Documents\pagina web CECyTE/logo_cecy.png" />
+	<title>Inicio CECyTEN Tuxpan</title>
+		<style type="text/css">
+		body{
+			padding-top: 9rem;
+			margin: 0;
+			background-color: #ffffff;
+		}
+
+		/* Encabezado fijo con menu desplegable */
+
+		header{
+			background-color: #ffffff;
+			position: fixed;
+			left: 0;
+			top: 0;
+			right: 0;
+			box-shadow: 2px 5px 5px gray;
+		}
+
+		.logo-nav-contenedor{
+			display: flex;
+			/*justify-content: space-between;
+			align-items: center;*/
+			padding: 2rem 0;
+		}
+
+		.header a {
+			color: black;
+			text-decoration: none;
+		}
+		
+
+		/* Menu desplegable */
+
+		.menu{
+			position: absolute;
+			right: 2rem;
+			padding: 1.4rem 0;
+		}
+
+		.menu ul li {
+    		background-color:#ffffff;
+		}
+
+		.menu ul {
+  			list-style:none;
+  			margin:0;
+  			padding:0;
+  		}
+
+		.menu ul a {
+  			display: block;
+  			color:#000000;
+  			text-decoration:none;
+  			font-weight:400;
+  			font-size:15px;
+  			font-weight: bolder;
+  			padding:10px;
+  			font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  			text-transform:uppercase;
+  			letter-spacing:1px;
+		}
+
+		.menu ul li {
+			display: inline-block;
+		 	position: relative;
+		  	float:left;
+		  	margin:0;
+		  	padding:0;
+		}
+
+		.menu ul li:hover {
+		  	background: linear-gradient(to right, #169353, #42B656);
+		  	border-radius: 5px;
+		}	
+
+		.menu ul ul {
+			display:none;
+			position:absolute;
+			top:100%;
+			left:0;
+			padding:0;
+		}
+
+		.menu ul ul li {
+		  	float:none;
+		  	width:165px;
+			text-align: left;
+			background-color: #F16526;
+			border-radius: 5px;
+		}
+
+
+		.menu ul ul a {
+		  	line-height:120%;
+		  	padding:10px 15px;
+		}
+
+		.menu ul li:hover > ul {
+		  	display:block;
+		}
+		
+		/* Articulos con Informacion 1*/
+
+		.art1{
+			display: flex;
+			padding-top: 4rem ;
+			padding-bottom: 2rem;
+			width: 100%;
+			background-color: #D6EAF8 ;
+		}
+
+		#artp1{
+			text-align: center;
+			font-size: sans serif;
+			font-size: 200%;
+			/*position: relative;*/
+			margin-right: 2%;
+		}
+
+		/* Articulos con Informacion 1 */
+
+		.art2{
+			display: flex;
+			background-color: #F6DDCC;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 2rem;
+		}
+
+
+		#artp2{
+			text-align: center;
+			font-size: sans serif;
+			font-size: 200%;
+		}
+
+		#map{
+			border: 0;
+			border-radius: 10px;
+		}
+
+		.art3{
+			display: flex;
+			background-color: #EBDEF0;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 2rem;
+		}
+
+		#artp3{
+			text-align: justify;
+			font-size: sans serif;
+			font-size: 200%;
+			padding-right: 3rem;
+		}
+
+		.art4{
+			display: flex;
+			background-color: #D5F5E3;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 2rem;
+		}
+
+		#artp4{
+			text-align: justify;
+			font-size: sans serif;
+			font-size: 200%;
+			padding-left: 3rem;
+		}
+
+		.art5{
+			display: flex;
+			background-color: #F2D7D5;
+			justify-content: space-between;
+			align-items: center;
+			padding: 2rem 2rem;
+		}
+
+		#artp5{
+			text-align: justify;
+			font-size: sans serif;
+			font-size: 200%;
+			padding-left: 3rem;
+			padding: 3rem;
+		}
+
+		.btn{
+		background-color: #42B656;
+		border: none;
+    	padding: 1rem 1rem;
+    	text-align: center;
+    	text-decoration: none;
+    	font-size: 150%;
+    	cursor: pointer;
+    	border-radius: 5px;
+    	-webkit-transition-duration: 0.4s;
+   		transition-duration: 0.4s;
+    	}
+
+    	.btn:hover {
+    		background-color: #F16526;
+    	}
+
+		/* Imagenes de articulos */
+
+		#fot1{
+			margin-right: 2%;
+			border-radius: 10px;
+		}
+
+		.logos{
+			display: flex;
+			background-color: #ffffff;
+			justify-content: space-between;
+			align-items: center;
+			padding: 8rem 2rem;
+		}
+
+
+		/* Subtitulos */
+
+		span{
+			color: darkred;
+		}
+
+		/* Pie de pagina */
+
+		footer{
+			background-color: #999999;
+		}
+
+		.div1footer{
+			background-color: #131313;
+			color: #ffffff;
+			padding: 2rem 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		}
+
+		.div2footer{
+			padding: 2rem 0;
+			background-color: #000000;
+			color: #ffffff;
+			text-align: center;
+			font-size: 130%;
+			font-family: serif;
+		}
+
+
+		#contactanos{
+			font-size: 90%;
+		}
+
+		.desarrollador{
+			text-decoration: none; 
+			color: #ffffff;"
+		}
+
+		.desarrollador:hover {
+			color: #00FFFF;
+		}
+
+		/*resposividad*/
+
+		@media only screen and (max-width: 900px) {
+			body {
+				padding: 7rem 0 0 0;
+			}
+		}
+
+		/* KISG */
+
+	
+	</style>
+
+</head>
+
+<!-- KISG --> 
+
+<!-- Encabezado Fijo -->
+<header class="header">
+	<div class="contenedor logo-nav-contenedor">
+
+		<!-- logo Cecyte encabezado -->
+
+		<a href="CECyTEN Tuxpan.html"><img class="logo" src="D:\kelvi\Documents\pagina web CECyTE/logo_cecyte_tux.png" width="30%"></a>
+
+		<!-- menu desplegable -->
+
+		<nav class="menu">
+			<ul>
+				<li><a href="#">Aspirantes</a>
+					<ul>
+						<li><a href="Requisitos.html">Requisitos</a></li>
+						<li><a href="Guia para examen de admision.html">Gu&iacute;a para examen de admisi&oacute;n</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Carreras</a>
+					<ul>
+						<li><a href="Tecnico en programacion.html">T&eacute;cnico en Programaci&oacute;n</a></li>
+						<li><a href="Tecnico en proceso de alimentos.html">T&eacute;nico en proceso de alimentos</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Alumnos</a>
+					<ul>
+						<li><a href="#">Lista de alumnos de nuevo ingreso</a></li>
+						<li><a href="#">Portal alumnos</a></li>
+						<li><a href="#">Pagos</a></li>
+						<li><a href="#">Calendario escolar</a></li>
+					</ul>
+				</li>	
+				<li><a href="#">Docentes</a>
+					<ul>
+						<li><a href="#">Portal docentes</a></li>
+						<li><a href="#">Calendario escolar</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<body>
+
+	<!-- primer articulo -->
+
+	<div class="art1">
+
+		<p id="artp1">
+		Colegio de Estudios Cient&iacute;ficos y Tecnol&oacute;gicos del Estado de Nayarit<br>Plantel Tuxpan
+		</p>
+
+		<!-- imagen del primer articulo -->
+
+		<img id="fot1" src="D:\kelvi\Documents\pagina web CECyTE/foto 1.jpeg" width="45%">
+	</div>
+
+	<!-- segundo articulo -->
+
+	<div class="art2">
+
+		<!-- mapa del segundo articulo -->
+
+		<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1850.383085492878!2d-105.27765593112599!3d21.94353893008437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x869e1dad31e0a83b%3A0x4bac453c13adfc6d!2sCECyTEN%2010%20Tuxpan!5e0!3m2!1ses-419!2smx!4v1637113317389!5m2!1ses-419!2smx" width="400" height="300" allowfullscreen="" loading="lazy"></iframe>
+
+		<p id="artp2">
+			<span>UBICACI&Oacute;N</span><br><br>
+			CECyTEN Tuxpan<br>Carretera Peñas - Tuxpan Km. 5,<br>63200 Tuxpan, Nay.
+		</p>
+	</div>
+
+	<!-- tercer articulo -->
+
+	<div class="art3">
+		<p id="artp3">
+			En Colegio de Estudios Cient&iacute;ficos y Tecnol&oacute;gicos del Estado de Nayarit Plantel Tuxpan, desde el 2008 nos comprometemos en perfeccionar e innovar nuestro Sistema Integral de Calidad, orientado a brindar servicios educativos de calidad.
+		</p>
+
+		<!-- imagne del tercer articulo -->
+
+		<img src="D:\kelvi\Documents\pagina web CECyTE/foto 2.jpeg" width="45%" style="border-radius: 10px;">
+	</div>
+
+	<!-- cuarto articulo -->
+
+	<div class="art4">
+
+		<!-- imagen del cuarto articulo -->
+
+		<img src="D:\kelvi\Documents\pagina web CECyTE/foto 3.jpeg" width="45%" style="border-radius: 10px;">
+
+		<p id="artp4">
+			Fomentamos la actitud deportiva, compañerismo y trabajo en equipo.
+		</p>
+	</div>
+
+	<!-- quinto articulo -->
+
+	<div class="art5">                                  
+		<p id="artp5"><span>Noticias</span><br>
+		Registro de vacunaci&oacute;n contra covid 19, para personas de 15 a 17 años</p>
+
+		<!-- boton redireccionador a web mi vacuna -->
+
+		<button class="btn"><a style="text-decoration: none; color: black;" href="https://mivacuna.salud.gob.mx">Registrate</a></button>
+	</div>
+
+	<!-- seccion de logotipos -->
+
+	<div class="logos">
+
+		<!-- logotipo de la sep -->
+
+		<img src="D:\kelvi\Documents\pagina web CECyTE/logoSep.png" width="23%">
+
+		<!-- logotipo de gobierno del estdo de nayarit -->
+
+		<img src="D:\kelvi\Documents\pagina web CECyTE/logoGobiernoDelEstado.png" width="23%">
+
+		<!-- logotipo de cecyte nayarit -->
+
+		<img src="D:\kelvi\Documents\pagina web CECyTE/logo_cecyte.png" width="23%">
+	</div>
+</body>
+
+<!-- pie de pagina -->
+
+<footer>
+
+	<!-- primer division del pie de pagina -->
+
+	<div class="div1footer">
+
+		<!-- logotipo cecyte nayarit -->
+
+		<a href="CECyTEN Tuxpan.html"><img class="logo" src="D:\kelvi\Documents\pagina web CECyTE/logo_cecyte.png" width="20%"></a>
+
+		<!-- imagen de contacto -->
+
+	<img src="D:\kelvi\Documents\pagina web CECyTE/contactanos.png" width="20%">
+	</div>
+
+	<!-- segunda division del pie de pagina -->
+			
+	<div class="div2footer">
+		<p>
+			&#169; 2021 CECyTEN Tuxpan. Derechos Reservados.<br>Desarrollado por <a class="desarrollador" href="https://www.facebook.com/ideas.kelvineitor.3/">Kelvim Guti&eacute;rrez</a>
+		</p>
+	</div>
+</footer>
+</html>
